@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#f5f8ff] text-slate-900 antialiased;
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(57, 104, 255, 0.09), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(19, 196, 178, 0.08), transparent 35%);
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-700;
+  }
+
+  .panel {
+    @apply rounded-3xl border border-white/70 bg-white/80 backdrop-blur-md shadow-[0_25px_70px_-30px_rgba(14,70,180,0.35)];
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-brand-700 via-brand-600 to-accent-600 bg-clip-text text-transparent;
+  }
+}
